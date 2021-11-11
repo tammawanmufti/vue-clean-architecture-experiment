@@ -1,5 +1,5 @@
 import Home from '@/features/home/presentation/views/Home.vue'
-import NumberTrivia from '@/features/number-trivia/presentation/views/NumberTrivia.vue'
+import NumberTrivia from '@/features/number-trivia/presentation/views/NumberTriviaPage.vue'
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
