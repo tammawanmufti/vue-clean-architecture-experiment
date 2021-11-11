@@ -1,4 +1,4 @@
-# example_1
+# vue-clean-architecture-experiment
 
 ## Project setup
 ```
