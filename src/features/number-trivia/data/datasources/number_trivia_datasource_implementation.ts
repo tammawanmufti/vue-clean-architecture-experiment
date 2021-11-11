@@ -1,7 +1,8 @@
 import axios from 'axios';
 import NumberTriviaDatasource from './number_trivia_datasource';
 
-export default class NumberTriviaDatasourceImplementation implements NumberTriviaDatasource{
+// @singleton()
+export default class NumberTriviaDatasourceImplementation extends NumberTriviaDatasource{
     numbersApi:string ='http://numbersapi.com';
 
     async getRandomNumberTrivia(): Promise<string> {
