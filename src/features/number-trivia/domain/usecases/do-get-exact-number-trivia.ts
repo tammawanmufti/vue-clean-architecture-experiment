@@ -1,8 +1,8 @@
-import UseCase from "@/core/model/usecase/usecase";
+import { Params, UseCase } from "@/core/model/usecase/usecase";
 import NumberTriviaEntity from "../entities/number-trivia-entity";
 import NumberTriviaRepository from "../repository/number-trivia-repository";
 
-export default class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,Params>{
+export class DoGetExactNumberTrivia extends UseCase<NumberTriviaEntity,NumberTriviaParams>{
     repository: NumberTriviaRepository;
     
     constructor(repository:NumberTriviaRepository){
@@ -10,16 +10,17 @@ export default class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,
         this.repository = repository;
     }
 
-    async call(params:Params):Promise<NumberTriviaEntity>{
+    async call(params:NumberTriviaParams):Promise<NumberTriviaEntity>{
         return await this.repository.getNumberTrivia(params.number);
     }
 }
 
-class Params {
+export class NumberTriviaParams extends Params{
     number:number;
     constructor(
         number:number
     ){
+        super();
         this.number = number
     }
 }

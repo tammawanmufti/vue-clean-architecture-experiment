@@ -1,10 +1,10 @@
-import UseCase from "@/core/model/usecase/usecase";
+import { NoParams, UseCase } from "@/core/model/usecase/usecase";
 import NumberTriviaEntity from "../entities/number-trivia-entity";
 import NumberTriviaRepository from "../repository/number-trivia-repository";
 
-export default class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,NoParams>{
-    repository: NumberTriviaRepository;
+export class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,NoParams>{
     
+    repository: NumberTriviaRepository;
     constructor(repository:NumberTriviaRepository){
         super();
         this.repository = repository;
@@ -14,5 +14,3 @@ export default class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,
         return await this.repository.getRandomNumberTrivia();
     }
 }
-
-class NoParams {}
