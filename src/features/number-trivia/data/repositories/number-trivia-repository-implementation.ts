@@ -1,4 +1,4 @@
-import NumberTriviaRepository from "../../domain/repository/number_trivia_repository";
+import NumberTriviaRepository from "../../domain/repository/number-trivia-repository";
 import NumberTriviaDatasourceImplementation from "../datasources/number_trivia_datasource_implementation";
 import NumberTriviaModel from "../model/number_trivia_model";
 
