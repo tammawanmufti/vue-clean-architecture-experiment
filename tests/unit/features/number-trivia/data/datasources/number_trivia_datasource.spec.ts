@@ -1,4 +1,4 @@
-import NumberTriviaDatasourceImplementation from '@/features/number-trivia/data/datasources/number_trivia_datasource_implementation';
+import NumberTriviaDatasourceImplementation from '@/features/number-trivia/data/datasources/number_trivia_remote_datasource_implementation';
 import { expect } from 'chai';
 
 let datasource = new NumberTriviaDatasourceImplementation()

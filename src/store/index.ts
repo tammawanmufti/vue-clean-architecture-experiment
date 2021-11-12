@@ -9,4 +9,4 @@ export default createStore({
   // modules: {
   //   numberTrivia:number_trivia_store
   // }
-})
+});

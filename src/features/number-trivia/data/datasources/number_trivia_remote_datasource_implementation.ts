@@ -1,5 +1,5 @@
 import axios from 'axios';
-import NumberTriviaDatasource from './number_trivia_datasource';
+import NumberTriviaDatasource from './number_trivia_remote_datasource';
 
 // @singleton()
 export default class NumberTriviaDatasourceImplementation extends NumberTriviaDatasource{

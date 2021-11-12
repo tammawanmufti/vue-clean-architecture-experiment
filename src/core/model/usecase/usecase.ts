@@ -1,1 +1,1 @@
-export default abstract class UseCase{}
+export default abstract class UseCase<Type,Param>{}
