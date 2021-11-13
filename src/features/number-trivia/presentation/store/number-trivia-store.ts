@@ -15,7 +15,6 @@ export const numberTriviaStore = {
     setTrivia(state: any, trivia: NumberTriviaEntity) {
       state.number = trivia.number;
       state.trivia = trivia.trivia;
-      console.log(state);
     },
   },
   actions: {
@@ -24,4 +23,5 @@ export const numberTriviaStore = {
       commit("setTrivia", result);
     },
   },
+
 };
