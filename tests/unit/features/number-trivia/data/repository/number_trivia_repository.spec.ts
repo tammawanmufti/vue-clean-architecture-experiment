@@ -1,6 +1,7 @@
 import NumberTriviaRepositoryImplementation from '@/features/number-trivia/data/repositories/number-trivia-repository-implementation';
+import { container } from 'tsyringe';
 
-let repository = new NumberTriviaRepositoryImplementation();
+let repository = container.resolve(NumberTriviaRepositoryImplementation);
 
 describe('Number Trivia Repository', () => {
     it('fetch random number trivia as NumberTriviaModel',async ()=>{

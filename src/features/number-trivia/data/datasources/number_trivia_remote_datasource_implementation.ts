@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { singleton } from 'tsyringe';
 import NumberTriviaDatasource from './number_trivia_remote_datasource';
 
-// @singleton()
+@singleton()
 export default class NumberTriviaDatasourceImplementation extends NumberTriviaDatasource{
     numbersApi:string ='http://numbersapi.com';
 

@@ -1,11 +1,11 @@
 import { NoParams } from '@/core/model/usecase/usecase';
-import NumberTriviaRepositoryImplementation from '@/features/number-trivia/data/repositories/number-trivia-repository-implementation';
 import { DoGetExactNumberTrivia, NumberTriviaParams } from '@/features/number-trivia/domain/usecases/do-get-exact-number-trivia';
 import { DoGetRandomNumberTrivia } from '@/features/number-trivia/domain/usecases/do-get-random-number-trivia';
+import { container } from 'tsyringe';
 
-let repository = new NumberTriviaRepositoryImplementation();
-let doGetRandomNumberTrivia = new DoGetRandomNumberTrivia(repository);
-let doGetExactNumberTrivia = new DoGetExactNumberTrivia(repository);
+
+let doGetRandomNumberTrivia = container.resolve(DoGetRandomNumberTrivia)
+let doGetExactNumberTrivia = container.resolve(DoGetExactNumberTrivia)
 
 describe('Number Trivia UseCases', () => {
     it('get random number trivia entity',async ()=>{

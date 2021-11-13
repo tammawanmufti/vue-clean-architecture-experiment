@@ -1,6 +1,8 @@
+import NumberTriviaDatasource from '@/features/number-trivia/data/datasources/number_trivia_remote_datasource';
 import NumberTriviaDatasourceImplementation from '@/features/number-trivia/data/datasources/number_trivia_remote_datasource_implementation';
+import { container } from 'tsyringe';
 
-let datasource = new NumberTriviaDatasourceImplementation()
+let datasource:NumberTriviaDatasource = container.resolve(NumberTriviaDatasourceImplementation);
 
 describe('Number Trivia DataSource', () => {
     it('fetch random number trivia',async ()=>{
