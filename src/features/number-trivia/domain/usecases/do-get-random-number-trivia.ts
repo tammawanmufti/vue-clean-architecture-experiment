@@ -13,7 +13,7 @@ export class DoGetRandomNumberTrivia extends UseCase<NumberTriviaEntity,NoParams
         this.repository = repository;
     }
 
-    async call(noParams:NoParams):Promise<NumberTriviaEntity>{
+    async call():Promise<NumberTriviaEntity>{
         let result = await this.repository.getRandomNumberTrivia();
         return NumberTriviaEntity.fromModel(result);
     }

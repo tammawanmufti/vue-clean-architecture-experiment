@@ -2,10 +2,10 @@
   <div class="number-trivia-page">
     <h1>Number Trivia</h1>
     <div class="number">
-      <span>{{$store.state.number}}</span>
+      <span>{{$store.state.numberTriviaStore.number}}</span>
     </div>
     <div class="trivia">
-      <span>{{$store.state.trivia}}</span>
+      <span>{{$store.state.numberTriviaStore.trivia}}</span>
     </div>
     <div class="input-form">
       <div>
@@ -13,12 +13,16 @@
       </div>
 
       <div class="buttons">
-        <button>Find Number Trivia</button>
+        <button @click="$store.dispatch('getRandomNumberTrivia')"> Find Number Trivia</button>
       </div>
     </div>
   </div>
 </template>
 
+<script lang="ts">
+
+
+</script>
 
 <style>
 .number {
