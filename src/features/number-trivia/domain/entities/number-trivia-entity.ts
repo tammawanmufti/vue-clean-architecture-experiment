@@ -1,6 +1,11 @@
 import NumberTriviaModel from '../../data/model/number_trivia_model';
 
-export default class NumberTriviaEntity {
+export interface NumberTriviaEntityInterface {
+    number:number;
+    trivia:string;
+}
+
+export default class NumberTriviaEntity implements NumberTriviaEntityInterface {
     number:number;
     trivia:string;
 

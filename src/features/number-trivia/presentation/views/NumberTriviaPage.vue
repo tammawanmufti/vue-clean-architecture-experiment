@@ -9,17 +9,36 @@
     </div>
     <div class="input-form">
       <div>
-        <input type="text" placeholder="Input Number"/>
+        <input v-model="inputNumber" type="text" placeholder="Input Number"/>
       </div>
 
       <div class="buttons">
-        <button @click="$store.dispatch('getRandomNumberTrivia')"> Find Number Trivia</button>
+        <button @click="$store.dispatch('getExactNumberTrivia' ,$store.state.numberTriviaStore.inputNumber)">Find Number Trivia</button>
+        <button @click="$store.dispatch('getRandomNumberTrivia',)">Random Number Trivia</button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+
+export default {
+  mutations:{
+    setInputNumber(state:any, value:string){
+      state.inputNumber = value;
+      console.log(value);
+    }
+  },
+  computed: {
+    
+  },
+  methods:{
+    setInputNumber({commit}:any){
+      commit('updateMessage');
+    }
+  }
+
+}
 
 
 </script>
