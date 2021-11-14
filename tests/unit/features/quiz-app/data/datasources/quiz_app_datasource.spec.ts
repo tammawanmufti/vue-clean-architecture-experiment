@@ -5,7 +5,7 @@ import QuizRemoteDataSourceImplementation from '@/features/quiz-app/data/datasou
 let datasource: QuizRemoteDataSource = container.resolve(QuizRemoteDataSourceImplementation);
 
 describe('Get Quiz From API', () => {
-  it('should return a quiz', async () => {
+  it('should return a quiz (only required data)', async () => {
     const quiz = await datasource.getQuiz();
     expect(quiz).toBeDefined();
     expect(quiz.response_code).toBeDefined();
