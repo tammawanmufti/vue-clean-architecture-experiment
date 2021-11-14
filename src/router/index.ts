@@ -1,5 +1,6 @@
 import Home from '@/features/home/presentation/views/Home.vue'
 import NumberTrivia from '@/features/number-trivia/presentation/views/NumberTriviaPage.vue'
+import Quiz from '@/features/quiz-app/presentation/views/QuizApp.vue';
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
@@ -17,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/number-trivia',
     name: 'NumberTrivia',
     component: NumberTrivia,
+  },
+  {
+    path: '/quiz',
+    name: 'Quiz',
+    component: Quiz,
   }
 ]
 
